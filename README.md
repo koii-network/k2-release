@@ -8,7 +8,7 @@ _At this time we only support Ubuntu 20.04 LTS. We offer macOS and Windows binar
 
 There is no minimum amount of KOII required to stake and participate in the voting process.
 
-To participate in the voting process you must configure your system, start a validator and configure your voting and stake accounts. This guide will show you how to do this.
+To participate in the voting process you must configure your system, start a validator, and configure your voting and stake accounts. This guide will show you how to do this.
 
 ## Quick Links
 
@@ -93,7 +93,7 @@ sudo su koii
 We host an install script that will install and configure the Koii validator software. Run it with the following command
 
 ```bash
-sh -c "$(curl -sSfL https://raw.githubusercontent.com/koii-network/k2-release/master/k2-install-init.sh/koii-install-init.sh)"
+sh -c "$(curl -sSfL https://raw.githubusercontent.com/koii-network/k2-release/master/k2-install-init.sh)"
 ```
 
 This scipt will install and configure the validator software with an identity key and the `koii` cli configured for `testnet`. It is important to note that this identity key created IS NOT your validator identity. If you have a private key which is funded for staking with a validator you can replace the one generated with this script. 
