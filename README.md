@@ -100,6 +100,14 @@ This scipt will install and configure the validator software with an identity ke
 
 If everything is configured correctly you can test it by running `koii balance` which will return the balance of the local key.
 
+### Step 3: Run the System Tuner
+
+This will configure certain aspects of your system to better support the validator.
+
+```bash
+koii-sys-tuner --user koii
+```
+
 ## Validator Setup
 
 The following guide describes how to setup a validator on Ubuntu.
