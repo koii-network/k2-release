@@ -1,5 +1,17 @@
 # K2 - The Koii Settlement Layer
 ![K2 - Tick, Tock, Fast Blocks](https://docs.koii.network/assets/images/K2%20-%20Tick,%20Tock,%20Fast%20Blocks-5d576dbf6310f66a79e36af376974f24.svg)
+
+<div align="center">
+  
+[![Docs](https://img.shields.io/badge/Docs-https%3A%2F%2Fdocs.koii.network-green)](https://docs.koii.network)
+[![Latest version](https://img.shields.io/github/v/release/koii-network/k2-release?label=Latest&sort=semver)](https://github.com/koii-network/k2-release/releases)
+[![Chat](https://img.shields.io/discord/776174409945579570?style=flat&label=Discord)](https://discord.gg/koii)
+![Stars](https://img.shields.io/github/stars/koii-network/desktop-node?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/koii-network/desktop-node?style=social)
+[![Twitter](https://img.shields.io/twitter/follow/KoiiNetwork)](https://twitter.com/KoiiNetwork)
+  
+</div>
+
 # Running a K2 Node
 
 _At this time we only support Ubuntu 20.04 LTS. We offer macOS and Windows binaries however we do not have official guides on how to set up your validator environment on those operating systems._
