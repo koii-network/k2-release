@@ -19,7 +19,7 @@ KOII_INSTALL_INIT_ARGS=v1.15.0
 { # this ensures the entire script is downloaded #
 
 if [ -z "$KOII_DOWNLOAD_ROOT" ]; then
-    KOII_DOWNLOAD_ROOT="https://github.com/koii-network/k2-release/releases/download/"
+    KOII_DOWNLOAD_ROOT="https://github.com/koii-network/k2-release/releases/download"
 fi
 GH_LATEST_RELEASE="https://api.github.com/repos/koii-network/k2-release/releases/latest"
 
