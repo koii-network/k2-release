@@ -1,6 +1,17 @@
 KOII_RELEASE=v1.15.0
 KOII_INSTALL_INIT_ARGS=v1.15.0
 
+#!/bin/sh
+# Copyright 2016 The Rust Project Developers. See the COPYRIGHT
+# file at the top-level directory of this distribution and at
+# http://rust-lang.org/COPYRIGHT.
+#
+# Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+# http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+# <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
+# option. This file may not be copied, modified, or distributed
+# except according to those terms.
+
 # This is just a little script that can be downloaded from the internet to
 # install koii-install. It just does platform detection, downloads the installer
 # and runs it.
@@ -8,7 +19,7 @@ KOII_INSTALL_INIT_ARGS=v1.15.0
 { # this ensures the entire script is downloaded #
 
 if [ -z "$KOII_DOWNLOAD_ROOT" ]; then
-    KOII_DOWNLOAD_ROOT="https://github.com/koii-network/k2-release/releases/download"
+    KOII_DOWNLOAD_ROOT="https://github.com/koii-network/k2-release/releases/download/"
 fi
 GH_LATEST_RELEASE="https://api.github.com/repos/koii-network/k2-release/releases/latest"
 
@@ -27,7 +38,7 @@ FLAGS:
         --no-modify-path    Don't configure the PATH environment variable
 
 OPTIONS:
-    -d, --data_dir <PATH>    Directory to store install data
+    -d, --data-dir <PATH>    Directory to store install data
     -u, --url <URL>          JSON RPC URL for the koii cluster
     -p, --pubkey <PUBKEY>    Public key of the update manifest
 EOF
@@ -54,17 +65,24 @@ main() {
       esac
     done
 
-    case "$(uname)" in
+    _ostype="$(uname -s)"
+    _cputype="$(uname -m)"
+
+    case "$_ostype" in
     Linux)
-      TARGET=x86_64-unknown-linux-gnu
+      _ostype=unknown-linux-gnu
       ;;
     Darwin)
-      TARGET=x86_64-apple-darwin
+      if [[ $_cputype = arm64 ]]; then
+        _cputype=aarch64
+      fi
+      _ostype=apple-darwin
       ;;
     *)
       err "machine architecture is currently unsupported"
       ;;
     esac
+    TARGET="${_cputype}-${_ostype}"
 
     temp_dir="$(mktemp -d 2>/dev/null || ensure mktemp -d -t koii-install-init)"
     ensure mkdir -p "$temp_dir"
@@ -170,3 +188,4 @@ downloader() {
 main "$@"
 
 } # this ensures the entire script is downloaded #
+
