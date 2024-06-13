@@ -1,5 +1,5 @@
-KOII_RELEASE=v1.15.0
-KOII_INSTALL_INIT_ARGS=v1.15.0
+KOII_RELEASE=v1.16.2
+KOII_INSTALL_INIT_ARGS=v1.16.2
 
 #!/bin/sh
 # Copyright 2016 The Rust Project Developers. See the COPYRIGHT
