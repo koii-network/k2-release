@@ -1,5 +1,5 @@
-KOII_RELEASE=v1.14.0
-KOII_INSTALL_INIT_ARGS=v1.14.0
+KOII_RELEASE=v1.15.0
+KOII_INSTALL_INIT_ARGS=v1.15.0
 
 # This is just a little script that can be downloaded from the internet to
 # install koii-install. It just does platform detection, downloads the installer
